@@ -53,3 +53,7 @@ Etape 5 :
             +=> compléter les éléments '.card-title' avec la structure déclarative {{ myPostItem.title }}
             +=> compléter les éléments '.card-text' avec la structure déclarative {{ myPostItem.body }}
 
+Etape 6 :
+    - compléter les éléments '.card' avec un '.card-footer'
+        => le '.card-footer' contien un "bouton de like" et un "compteur de like" avec un style 'flex'
+            +=> améliorer le style du "bouton de like"

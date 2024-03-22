@@ -22,4 +22,24 @@
     .card-body {
         padding: 1rem;
     }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+
+        button {
+            border: none;
+            background: linear-gradient(45deg, #fd267a, #ff6036);
+            color: white;
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+
+            &:hover {
+                background: linear-gradient(45deg, #ff6036, #fd267a);
+            }
+        }
+    }
 }
