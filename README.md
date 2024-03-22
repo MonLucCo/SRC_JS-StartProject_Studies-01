@@ -80,3 +80,11 @@ Etape 8 :
             +=> ajouter un élément '.commentsList' dans l'élément '.Comments'
             +=> la directive 'v-for' permet de parcourir mes commentaires 'myPostItem.comments' par 'myCommentItem' avec la clé de parcourt 'myCommenttItem.id'
                 >> la structure finale est la suivante : **postList [ i ] { userId, id, title, body, likes, comments { id, body} }**
+
+Etape 9 :
+    - Pas de modification, seulement des axes d'amélioration
+        => mettre des 'likes' par 'commentaire'
+        => plusieurs photos et carrousel par élément '.card'
+        => gérer l'affichage pour réduire la hauteur de la page
+        => adapter le nombre de colonne en fonction de la largeur de la page
+        
