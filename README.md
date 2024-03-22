@@ -7,3 +7,10 @@ Etape 1 :
 
         => Pour comprendre l'expression 'mount' : https://vuejs.org/guide/essentials/lifecycle.html
 
+Etape 2 :
+    - Création de données pour exploitation
+        => Création de données de travail avec https://jsonplaceholder.typicode.com/
+            >> utilisation de données '/posts' (100 posts)
+        
+        => Dans 'html/createApp', charger les données de l'API REST avec 'mounted()'
+        

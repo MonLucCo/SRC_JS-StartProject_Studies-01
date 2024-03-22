@@ -19,7 +19,12 @@
                 return {
                     message: 'Hello Vue!'
                 }
-            }
+            },
+            mounted() {
+                fetch('https://jsonplaceholder.typicode.com/posts')     // API REST '/posts' pour 100 posts
+                    .then(response => response.json())
+                    .then(data => console.log(data))                    // Affichage dans la console des données      
+            },
         }).mount('#app')
     </script>
 </body>
