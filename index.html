@@ -23,8 +23,8 @@
                             </p>
                         </div>
                         <div class="card-footer">
-                            <button>Like</button>
-                            <span>0 like</span>
+                            <button v-on:click="addLike(myPostItem)">Like</button>
+                            <span>{{ myPostItem.likes ? myPostItem.likes : "0" }} like{{ myPostItem.likes && (myPostItem.likes > 1) ? "s" : "" }}</span>
                         </div>
                     </div>
                 </div>
@@ -41,6 +41,20 @@
             data() {
                 return {
                     postList: []        // création du tableau 'postList' pour recevoir les données json
+                }
+            },
+            methods: {
+                addLike(myPost) {
+                    if (!myPost.likes) {
+                        myPost.likes = 1    // initialisation du compteur qui n'existait pas encore (valeur NaN)
+                    } else {
+                        myPost.likes++      // incrément du nombre de 'likes' dans le 'myPost'
+                    }
+                    // if (myPost.likes) {
+                    //     myPost.likes++      // incrément du nombre de 'likes' dans le 'myPost'
+                    // } else {
+                    //     myPost.likes = 1    // initialisation du compteur qui n'existait pas encore (valeur NaN)
+                    // }
                 }
             },
             mounted() {

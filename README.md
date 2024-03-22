@@ -57,3 +57,11 @@ Etape 6 :
     - compléter les éléments '.card' avec un '.card-footer'
         => le '.card-footer' contien un "bouton de like" et un "compteur de like" avec un style 'flex'
             +=> améliorer le style du "bouton de like"
+
+Etape 7 :
+    - compter les "like" avec une gestion d'événement dans Vue
+        => recherche documentation 'event vuejs' (document : https://v2.fr.vuejs.org/v2/guide/events.html)
+            +=> ajout de l'instruction 'v-on' de gestion d'événement 'click' sur le bouton de '.card-footer' en déclenchant une méthode 'addLike(myItemPost)'
+                >> déclaration de la "méthode 'addLike(myItemPost)'" dans la Vue 'createApp'
+                >> la méthode 'addLike(myItemPost)' identifie un champ 'likes' dans la structure 'postList' (visualisation possible avec 'Vue.js devtools')
+            +=> gestion du compteur de likes (élément 'span' de '.card-footer')
