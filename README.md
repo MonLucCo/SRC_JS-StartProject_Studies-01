@@ -34,3 +34,12 @@ Etape 3 :
     - pour les images utiliser un créateur d'image (recherche : fake img api)
         => création des données images avec https://picsum.photos/
             >> utilisation pour l'image du code source 'https://picsum.photos/200/300'
+
+Etape 4 :
+    - mettre un style aux '.card' de notre Vue
+        => créer un ficher style.scss (fichier en SASS)
+            +=> pour compiler le Sass (*.scss) en CSS (*.css), utilisation d'une extension VSCode 'Live Sass Compiler'
+                >> utiliser la méthode d'installation demandée : Ctrl+P puis code 'ext install glenn2223.live-sass.'
+            +=> pour '.card' faire un style en Sass, puis le compiler en utilisant 'Watch Sass' du menu bas pour obtenir 'style.css'
+        => créer le lien 'style.css' dans 'index.html'
+    - disposer les éléments '.card' avec une disposition 'flex' dans le 'style.scss'

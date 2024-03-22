@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: calc(100% / 4);
+    padding: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    img {
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
