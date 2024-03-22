@@ -65,3 +65,18 @@ Etape 7 :
                 >> déclaration de la "méthode 'addLike(myItemPost)'" dans la Vue 'createApp'
                 >> la méthode 'addLike(myItemPost)' identifie un champ 'likes' dans la structure 'postList' (visualisation possible avec 'Vue.js devtools')
             +=> gestion du compteur de likes (élément 'span' de '.card-footer')
+
+Etape 8 :
+    - ajouter des commentaires pour chaque '.card'
+        => pour chaque élémnet '.card', ajouter un élément '.comments' dans 'postList'
+            +=> ajouter un formulaire 'form' sans action et comprenant un 'input'
+                >> mettre un style adapté pour ce formulaire (la classe '.comment' doit être placée à la racine ! **Raison non comprise !**)
+            +=> gestion d'un événement de soumission du formulaire avec 'v-on: submit' associé à une méthode 'addComment()' dans la Vue 'createApp'
+                >> pour éviter le rechargement de la page (lors de la soumission), il faut utiliser 'submit.prevent'
+                >> pour ajouter un commentaire sur l'élémént '.card', il faut préciser 'myPostItem' et avoir le contenu de la soumission avec l'événement 'event'
+                >> la valeur du commentaire 'myValue' est le premier élément '.elements[0].value' de l'événement cible 'event.target'
+                >> Le commentaire est inséré dans un élément structuré 'myComment' comprenant { id, body } 
+        => afficher les commentaires dans chaque élément '.card'
+            +=> ajouter un élément '.commentsList' dans l'élément '.Comments'
+            +=> la directive 'v-for' permet de parcourir mes commentaires 'myPostItem.comments' par 'myCommentItem' avec la clé de parcourt 'myCommenttItem.id'
+                >> la structure finale est la suivante : **postList [ i ] { userId, id, title, body, likes, comments { id, body} }**

@@ -43,3 +43,27 @@
         }
     }
 }
+
+.comments {
+    display: flex;
+    justify-content: center;
+    align-items: center;        /* pour le traitement des commentaires */
+    flex-direction: column;     /* pour le traitement des commentaires */
+    padding: 1rem;
+
+    .commentsList {
+        margin-top: 1rem;
+    }
+
+    form {
+        width: 100%;
+    }
+            
+    input {
+        border-radius: 50px;
+        border: 1px solid #ccc;
+        width: 100%;
+        padding: 0.5rem;
+    }        
+} 
+

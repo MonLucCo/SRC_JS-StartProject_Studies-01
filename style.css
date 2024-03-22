@@ -37,4 +37,24 @@
 }
 .card .card-footer button:hover {
   background: linear-gradient(45deg, #ff6036, #fd267a);
+}
+
+.comments {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* pour le traitement des commentaires */
+  flex-direction: column; /* pour le traitement des commentaires */
+  padding: 1rem;
+}
+.comments .commentsList {
+  margin-top: 1rem;
+}
+.comments form {
+  width: 100%;
+}
+.comments input {
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

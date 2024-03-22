@@ -11,7 +11,7 @@
     <div id="app">
         <section>
             <div class="row">
-                <div class="col" v-for="myPostItem in postList" ::key="myPostItem.id">
+                <div class="col" v-for="myPostItem in postList" :key="myPostItem.id">
                     <div class="card">
                         <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
                         <div class="card-body">
@@ -25,6 +25,16 @@
                         <div class="card-footer">
                             <button v-on:click="addLike(myPostItem)">Like</button>
                             <span>{{ myPostItem.likes ? myPostItem.likes : "0" }} like{{ myPostItem.likes && (myPostItem.likes > 1) ? "s" : "" }}</span>
+                        </div>
+                        <div class="comments">
+                            <form v-on:submit.prevent="(event) => addComment(event, myPostItem)">       <!-- https://v2.fr.vuejs.org/v2/guide/events.html et capture de l'événement dans 'event'-->
+                                <input type="text">
+                            </form>
+                            <div class="commentsList">
+                                <div class="comment" v-for="myCommentItem in myPostItem.comments" :key="myCommentItem.id" >
+                                    {{ myCommentItem.body }}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,11 +60,18 @@
                     } else {
                         myPost.likes++      // incrément du nombre de 'likes' dans le 'myPost'
                     }
-                    // if (myPost.likes) {
-                    //     myPost.likes++      // incrément du nombre de 'likes' dans le 'myPost'
-                    // } else {
-                    //     myPost.likes = 1    // initialisation du compteur qui n'existait pas encore (valeur NaN)
-                    // }
+                },
+                addComment(myEvent, myPost) {
+                    const myValue = myEvent.target.elements[0].value           // myEvents contient tous les événements amenant à 'input', le premier est celui utile
+                    const myComment = {                                         // élément structuré représentant un commentaire pour l'insérer dans la liste des commentaires
+                        id: myPost.comments ? myPost.comments.length : 1,
+                        body: myValue
+                    }
+                    if (myPost.comments) {
+                        myPost.comments.push( myComment )     // cas d'un commentaire (second et suivant) pour cet élément '.card'
+                    } else {
+                        myPost.comments = [myComment]         // cas du premier commentaire de cette élément '.card'
+                    }
                 }
             },
             mounted() {
