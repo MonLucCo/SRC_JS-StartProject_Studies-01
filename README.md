@@ -43,3 +43,13 @@ Etape 4 :
             +=> pour '.card' faire un style en Sass, puis le compiler en utilisant 'Watch Sass' du menu bas pour obtenir 'style.css'
         => créer le lien 'style.css' dans 'index.html'
     - disposer les éléments '.card' avec une disposition 'flex' dans le 'style.scss'
+
+Etape 5 :
+    - exploiter les données de 'postList' pour les afficher en élément '.card'
+        => suppression des éléménts '.col' qui ont été dupliqués (il faut n'en garder qu'un seul pour conserver la structure dans le DOM)
+        => utiliser la directive 'v-for' de Vue.Js (documentation par recherche de : 'v-for dans vue.js') pour les éléménts '.col'
+            >> Documentation : https://v2.fr.vuejs.org/v2/guide/list.html
+            +=> la directive 'v-for' permet de parcourir 'postList' par 'myPostItem' avec la clé de parcourt 'myPostItem.id' (structure fourni lors du post)
+            +=> compléter les éléments '.card-title' avec la structure déclarative {{ myPostItem.title }}
+            +=> compléter les éléments '.card-text' avec la structure déclarative {{ myPostItem.body }}
+

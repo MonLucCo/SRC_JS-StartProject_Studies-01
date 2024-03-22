@@ -11,47 +11,16 @@
     <div id="app">
         <section>
             <div class="row">
-                <div class="col">
+                <div class="col" v-for="myPostItem in postList" ::key="myPostItem.id">
                     <div class="card">
                         <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
                         <div class="card-body">
                             <h5 class="card-title">
-                                Title
+                                {{ myPostItem.title }}
                             </h5>
-                            <p class="card-text">Lorem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Title
-                            </h5>
-                            <p class="card-text">Lorem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Title
-                            </h5>
-                            <p class="card-text">Lorem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Title
-                            </h5>
-                            <p class="card-text">Lorem</p>
+                            <p class="card-text">
+                                {{ myPostItem.body }}
+                            </p>
                         </div>
                     </div>
                 </div>
