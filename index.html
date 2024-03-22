@@ -7,7 +7,56 @@
 </head>
 <body>
     
-    <div id="app">{{ message }}</div>
+    <div id="app">
+        <section>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Title
+                            </h5>
+                            <p class="card-text">Lorem</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Title
+                            </h5>
+                            <p class="card-text">Lorem</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Title
+                            </h5>
+                            <p class="card-text">Lorem</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/300" alt="Une image aléatoire de Picsum">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Title
+                            </h5>
+                            <p class="card-text">Lorem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="https://unpkg.com/vue@3"></script>
 
@@ -17,13 +66,13 @@
         createApp({
             data() {
                 return {
-                    message: 'Hello Vue!'
+                    postList: []        // création du tableau 'postList' pour recevoir les données json
                 }
             },
             mounted() {
                 fetch('https://jsonplaceholder.typicode.com/posts')     // API REST '/posts' pour 100 posts
                     .then(response => response.json())
-                    .then(data => console.log(data))                    // Affichage dans la console des données      
+                    .then(data => this.postList.push(...data))          // chargement des données json 'data' dans le tableau 'postList' (par 'spread syntax') 
             },
         }).mount('#app')
     </script>
