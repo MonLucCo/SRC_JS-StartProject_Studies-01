@@ -97,7 +97,7 @@ Le projet permet de réaliser :
 
 ### Etape 9 : axes d'amélioreation
 - Quelques idées d'amélioration
-  -mettre des 'likes' par 'commentaire'
+  - mettre des '`likes`' par '`commentaire`'
   - plusieurs photos et carrousel par élément `.card`
   - gérer l'affichage pour réduire la hauteur de la page
   - adapter le nombre de colonne en fonction de la largeur de la page
