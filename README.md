@@ -101,7 +101,7 @@ Le projet permet de réaliser :
   - plusieurs photos et carrousel par élément `.card`
   - gérer l'affichage pour réduire la hauteur de la page
   - adapter le nombre de colonne en fonction de la largeur de la page
-  - améliorer le **README.ms**
+  - améliorer le **README.md**
         
 ## Remerciements
 Débutant en développement en HTML, CSS et JavaScript, ce projet constitue mon premier développement sous Vue.Js.
