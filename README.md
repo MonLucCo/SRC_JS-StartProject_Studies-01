@@ -1,20 +1,20 @@
 # SRC_JS-StartProject_Studies-01
 Version d'étude issue de la vidéo Youtube de Thomas Mouchelet
 
-Etape 1 :
+## Etape 1 : initialisation avec la mise en place de *Vue.Js*
     - Ajout d'un code VueJs 'without Build Tools' (version simplifiée issue de 'using the global build')
         => lien : https://vuejs.org/guide/quick-start.html#creating-a-vue-application
 
         => Pour comprendre l'expression 'mount' : https://vuejs.org/guide/essentials/lifecycle.html
 
-Etape 2 :
+## Etape 2 : création de données (fictives) et chargement en mémoire
     - Création de données pour exploitation
         => Création de données de travail avec https://jsonplaceholder.typicode.com/
             >> utilisation de données '/posts' (100 posts)
         
         => Dans 'html/createApp', charger les données de l'API REST avec 'mounted()'
 
-Etape 3 :
+## Etape 3 : afficher les _cartes_ avec les données chargées en mémoire
     - Afficher les données 'data' dans notre Vue
         => remplacer dans data(), la donnée " message: 'Hello Vue' " par une nouvelle donnée (tableau vide) " postList: [] "
         => supprimer dans le rendu de '#app' la donnée "{{ message }}" - qui n'existe plus !
@@ -35,7 +35,7 @@ Etape 3 :
         => création des données images avec https://picsum.photos/
             >> utilisation pour l'image du code source 'https://picsum.photos/200/300'
 
-Etape 4 :
+## Etape 4 : mettre du style
     - mettre un style aux '.card' de notre Vue
         => créer un ficher style.scss (fichier en SASS)
             +=> pour compiler le Sass (*.scss) en CSS (*.css), utilisation d'une extension VSCode 'Live Sass Compiler'
@@ -44,7 +44,7 @@ Etape 4 :
         => créer le lien 'style.css' dans 'index.html'
     - disposer les éléments '.card' avec une disposition 'flex' dans le 'style.scss'
 
-Etape 5 :
+## Etape 5 :
     - exploiter les données de 'postList' pour les afficher en élément '.card'
         => suppression des éléménts '.col' qui ont été dupliqués (il faut n'en garder qu'un seul pour conserver la structure dans le DOM)
         => utiliser la directive 'v-for' de Vue.Js (documentation par recherche de : 'v-for dans vue.js') pour les éléménts '.col'
@@ -53,12 +53,12 @@ Etape 5 :
             +=> compléter les éléments '.card-title' avec la structure déclarative {{ myPostItem.title }}
             +=> compléter les éléments '.card-text' avec la structure déclarative {{ myPostItem.body }}
 
-Etape 6 :
+## Etape 6 : compléter la carte avec un compteur de _likes_ 
     - compléter les éléments '.card' avec un '.card-footer'
         => le '.card-footer' contien un "bouton de like" et un "compteur de like" avec un style 'flex'
             +=> améliorer le style du "bouton de like"
 
-Etape 7 :
+## Etape 7 : compter les _likes_
     - compter les "like" avec une gestion d'événement dans Vue
         => recherche documentation 'event vuejs' (document : https://v2.fr.vuejs.org/v2/guide/events.html)
             +=> ajout de l'instruction 'v-on' de gestion d'événement 'click' sur le bouton de '.card-footer' en déclenchant une méthode 'addLike(myItemPost)'
@@ -66,7 +66,7 @@ Etape 7 :
                 >> la méthode 'addLike(myItemPost)' identifie un champ 'likes' dans la structure 'postList' (visualisation possible avec 'Vue.js devtools')
             +=> gestion du compteur de likes (élément 'span' de '.card-footer')
 
-Etape 8 :
+## Etape 8 :
     - ajouter des commentaires pour chaque '.card'
         => pour chaque élémnet '.card', ajouter un élément '.comments' dans 'postList'
             +=> ajouter un formulaire 'form' sans action et comprenant un 'input'
@@ -81,10 +81,11 @@ Etape 8 :
             +=> la directive 'v-for' permet de parcourir mes commentaires 'myPostItem.comments' par 'myCommentItem' avec la clé de parcourt 'myCommenttItem.id'
                 >> la structure finale est la suivante : **postList [ i ] { userId, id, title, body, likes, comments { id, body} }**
 
-Etape 9 :
+## Etape 9 : axes d'amélioreation
     - Pas de modification, seulement des axes d'amélioration
         => mettre des 'likes' par 'commentaire'
         => plusieurs photos et carrousel par élément '.card'
         => gérer l'affichage pour réduire la hauteur de la page
         => adapter le nombre de colonne en fonction de la largeur de la page
+        => améliorer le **README.ms
         
