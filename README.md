@@ -30,7 +30,7 @@ Le projet permet de réaliser :
 
 ### Etape 3 : création des _cartes_
 - Afficher les données `data` dans notre Vue
-  - emplacer dans data(), la donnée " message: 'Hello Vue' " par une nouvelle donnée (tableau vide) " `postList: []` "
+  - remplacer dans `data()`, la donnée "`message: 'Hello Vue`" par une nouvelle donnée (tableau vide) "`postList: []`"
   - supprimer dans le rendu de `#app` la donnée "`{{ message }}`" - qui n'existe plus !
   - remplacer le message `console.log` par une insertion (`push()`) des données Json dans la données `postList`
     - utilisation du contexte `this` pour accéder au tableau `postList`
