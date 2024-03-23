@@ -28,7 +28,7 @@ Le projet permet de réaliser :
         
   - Dans `html/createApp`, charger les données de l'API REST avec 'mounted()'
 
-### Etape 3 : afficher les _cartes_ avec les données chargées en mémoire
+### Etape 3 : création des _cartes_
 - Afficher les données `data` dans notre Vue
   - emplacer dans data(), la donnée " message: 'Hello Vue' " par une nouvelle donnée (tableau vide) " `postList: []` "
   - supprimer dans le rendu de `#app` la donnée "`{{ message }}`" - qui n'existe plus !
@@ -49,7 +49,7 @@ Le projet permet de réaliser :
   - création des données images avec https://picsum.photos/
     - utilisation pour l'image du code source 'https://picsum.photos/200/300'
 
-### Etape 4 : mettre du style
+### Etape 4 : mettre du style aux _cartes_
 - mettre un style aux `.card` de notre Vue
   - créer un ficher style.scss (fichier en SASS)
     - pour compiler le Sass (*.scss) en CSS (*.css), utilisation d'une extension VSCode '_Live Sass Compiler_'
@@ -58,7 +58,7 @@ Le projet permet de réaliser :
   - créer le lien '`style.css`' dans '`index.html`'
     - disposer les éléments `.card` avec une disposition `flex` dans le 'style.scss'
 
-### Etape 5 :
+### Etape 5 : afficher toutes les _cartes_ avec les données chargées en mémoire
 - exploiter les données de `postList` pour les afficher en élément `.card`
   - suppression des éléménts `.col` qui ont été dupliqués (il faut n'en garder qu'un seul pour conserver la structure dans le DOM)
   - utiliser la directive `v-for` de Vue.Js (documentation par recherche de : '`v-for dans vue.js`') pour les éléménts `.col`
@@ -67,7 +67,7 @@ Le projet permet de réaliser :
     - compléter les éléments `.card-title` avec la structure déclarative `{{ myPostItem.title }}`
     - compléter les éléments `.card-text` avec la structure déclarative `{{ myPostItem.body }}`
 
-### Etape 6 : compléter la carte avec un compteur de _likes_ 
+### Etape 6 : compléter chaque _carte_ avec un compteur de _likes_ 
 - compléter les éléments `.card` avec un '`card-footer`
   - le `.card-footer` contien un "bouton de like" et un "compteur de like" avec un style '`flex`'
   - améliorer le style du "bouton de like"
